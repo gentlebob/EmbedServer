@@ -39,17 +39,13 @@ def redirect_to_target(id):
         <meta content="{vinfo["channel"]}" property="og:title" />
         <meta content="{vinfo["title"]}" property="og:description" />
         <meta content="https://clips.twitch.tv/{id}" property="og:url" />
-        <meta content="{video_format["url"]}" property="og:video" />
         <meta content="#43B581" data-react-helmet="true" name="theme-color" />
 
-        <meta property="og:video"
-        content="{video_format["url"]}" />
-        <meta property="og:video:secure_url"
-            content="{video_format["url"]}" />
+        <meta property="og:video" content="{video_format["url"]}" />
+        <meta property="og:video:secure_url" content="{video_format["url"]}" />
         <meta property="og:video:height" content="{width}" />
         <meta property="og:video:width" content="{video_format["height"]}" />
         <meta property="og:video:type" content="video/mp4" />
-        // <meta property="og:image" content="https://pbs.twimg.com/amplify_video_thumb/1915723648825974784/img/p89_kVK_sfwz8Iat.jpg" />
         <meta property="og:site_name" content="Botge" />
     </head>
     <body>
