@@ -38,7 +38,6 @@ def redirect_to_target(id):
         <title>Website Name</title>
         <meta content="{vinfo["channel"]}" property="og:title" />
         <meta content="{vinfo["title"]}" property="og:description" />
-        <meta content="https://clips.twitch.tv/{id}" property="og:url" />
         <meta content="{video_format["url"]}" property="og:video" />
         <meta content="#43B581" data-react-helmet="true" name="theme-color" />
     </head>
