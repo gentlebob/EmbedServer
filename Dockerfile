@@ -40,5 +40,5 @@ RUN poetry install --no-interaction --no-cache --no-root
 COPY . /app
 
 # Run Application
-EXPOSE 5000
+EXPOSE 8080
 CMD [ "poetry", "run", "waitress-serve", "--host", "0.0.0.0", "src.app.app" ]
