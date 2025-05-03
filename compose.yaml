@@ -1,0 +1,9 @@
+services:
+  app:
+    build:
+      context: .
+    environment:
+      - FLASK_APP=src/app.py
+    ports:
+      - 8001:5000
+    restart: always
