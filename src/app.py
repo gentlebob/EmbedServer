@@ -45,8 +45,8 @@ def redirect_to_target(id):
         <meta property="og:video:type" content="video/mp4" />
         <meta property="og:video" content="{video_format["url"]}" />
         <meta property="og:video:secure_url" content="{video_format["url"]}" />
-        <meta property="og:video:height" content="{width}" />
-        <meta property="og:video:width" content="{video_format["height"]}" />
+        <meta property="og:video:width" content="{width}" />
+        <meta property="og:video:height" content="{video_format["height"]}" />
         <meta property="og:site_name" content="Botge" />
     </head>
     <body>
