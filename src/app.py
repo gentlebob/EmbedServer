@@ -25,11 +25,11 @@ def redirect_to_target(id):
 
     try:
         vinfo = ydl.extract_info(f'https://clips.twitch.tv/{id}', download=False)
+        video_format = vinfo["formats"][max(3, len(vinfo["formats"]) - 1)]
+        height = video_format["width"] * video_format["aspect_ratio"]
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
         return None
-    
-    video_format = vinfo["formats"][max(3, len(vinfo["formats"]) - 1)]
 
     html_content = f"""
     <!DOCTYPE html>
@@ -38,8 +38,19 @@ def redirect_to_target(id):
         <title>Website Name</title>
         <meta content="{vinfo["channel"]}" property="og:title" />
         <meta content="{vinfo["title"]}" property="og:description" />
+        <meta content="https://clips.twitch.tv/{id}" property="og:url" />
         <meta content="{video_format["url"]}" property="og:video" />
         <meta content="#43B581" data-react-helmet="true" name="theme-color" />
+
+        <meta property="og:video"
+        content="{video_format["url"]}" />
+        <meta property="og:video:secure_url"
+            content="{video_format["url"]}" />
+        <meta property="og:video:height" content="{height}" />
+        <meta property="og:video:width" content="{video_format["width"]}" />
+        <meta property="og:video:type" content="video/mp4" />
+        // <meta property="og:image" content="https://pbs.twimg.com/amplify_video_thumb/1915723648825974784/img/p89_kVK_sfwz8Iat.jpg" />
+        <meta property="og:site_name" content="Botge" />
     </head>
     <body>
         <script>
