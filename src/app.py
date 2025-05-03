@@ -26,7 +26,7 @@ def redirect_to_target(id):
     try:
         vinfo = ydl.extract_info(f'https://clips.twitch.tv/{id}', download=False)
         video_format = vinfo["formats"][max(3, len(vinfo["formats"]) - 1)]
-        height = video_format["width"] * video_format["aspect_ratio"]
+        width = int(video_format["height"] * video_format["aspect_ratio"])
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
         return None
@@ -46,8 +46,8 @@ def redirect_to_target(id):
         content="{video_format["url"]}" />
         <meta property="og:video:secure_url"
             content="{video_format["url"]}" />
-        <meta property="og:video:height" content="{height}" />
-        <meta property="og:video:width" content="{video_format["width"]}" />
+        <meta property="og:video:height" content="{width}" />
+        <meta property="og:video:width" content="{video_format["height"]}" />
         <meta property="og:video:type" content="video/mp4" />
         // <meta property="og:image" content="https://pbs.twimg.com/amplify_video_thumb/1915723648825974784/img/p89_kVK_sfwz8Iat.jpg" />
         <meta property="og:site_name" content="Botge" />
