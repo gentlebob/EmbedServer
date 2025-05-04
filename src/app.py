@@ -58,13 +58,15 @@ def redirect_to_target(idge):
 
     html_content = f"""
     <!DOCTYPE html>
-    <html lang="en">
+    <html lang="en" prefix="og: https://ogp.me/ns#">
     <head>
+        <title>{title}</title>
         <meta charset="utf-8">
 
-        <meta content="#43B581" data-react-helmet="true" name="theme-color">
-        <meta content="Botge - {channel} - {upload_date_text}\nClipper: {clipper}\nCategory: {category}\nViews: {view_count}" property="og:site_name">
-        <meta content="{title}" property="og:title">
+        <meta name="theme-color" content="#43B581" data-react-helmet="true">
+        <meta property="og:site_name" content="Botge - {channel} - {upload_date_text}\nClipper: {clipper}\nCategory: {category}\nViews: {view_count}">
+        <meta property="og:title" content="{title}">
+        <meta property="og:url" content="{url}">
 
         <meta property="og:type" content="video">
         <meta property="og:video" content="{url}">
@@ -72,8 +74,7 @@ def redirect_to_target(idge):
         <meta property="og:video:secure_url" content="{url}">
         <meta property="og:video:width" content="{width}">
         <meta property="og:video:height" content="{height}">
-
-        <title>{title}</title>
+        <meta property="og:video:alt" content="{channel} channel - {title} named clip">
     </head>
     <body>
         <script>
