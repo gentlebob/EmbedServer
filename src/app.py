@@ -64,7 +64,7 @@ def redirect_to_target(idge):
         <meta charset="utf-8">
 
         <meta name="theme-color" content="#43B581" data-react-helmet="true">
-        <meta property="og:site_name" content="Botge - {channel} - {upload_date_text}\nClipper: {clipper}\nCategory: {category}\nViews: {view_count}">
+        <meta property="og:site_name" content="{channel} - {upload_date_text}\nClipper: {clipper}\nCategory: {category}\nViews: {view_count}">
         <meta property="og:title" content="{title}">
         <meta property="og:url" content="{url}">
 
