@@ -1,7 +1,10 @@
 services:
   embedserver:
-    build:
-      context: .
     ports:
       - 8080:8080
+    build:
+      context: .
+    mem_limit: 256m
     restart: always
+    volumes:
+      - ./files:/app/files
