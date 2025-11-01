@@ -188,7 +188,7 @@ def redirect_to_target2(permalink):
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#43B581">
 
-        <meta property="og:site_name" content="Botge - LivestreamFail{upload_date_text}\nUploader: {uploader}\nUps: {ups}\nComments: {comment_count}">
+        <meta property="og:site_name" content="LivestreamFail{upload_date_text}\nUploader: {uploader}\nUps: {ups}\nComments: {comment_count}">
         <meta property="og:title" content="{title}">
         <meta property="og:url" content="{reddit_url}">
 
