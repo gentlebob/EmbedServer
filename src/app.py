@@ -120,6 +120,11 @@ def redirect_to_target(idge):
         <meta property="og:video:height" content="{height}">
         <meta property="og:video:alt" content="{channel} channel - {title} named clip">
     </head>
+    <body>
+        <script>
+            window.location.replace('https://clips.twitch.tv/{idge}');
+        </script>
+    </body>
     </html>
     """
 
@@ -186,7 +191,7 @@ def redirect_to_target2(permalink):
         <title>{title}</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#43B581">
+        <meta name="theme-color" content="#4287f5">
 
         <meta property="og:site_name" content="LivestreamFail{upload_date_text}\nUploader: {uploader}\nUps: {ups}\nComments: {comment_count}">
         <meta property="og:title" content="{title}">
@@ -200,6 +205,11 @@ def redirect_to_target2(permalink):
         <meta property="og:video:height" content="{height}">
         <meta property="og:video:alt" content="LivestreamFail - {title}">
     </head>
+    <body>
+        <script>
+            window.location.replace('{reddit_url}');
+        </script>
+    </body>
     </html>
     """
     
