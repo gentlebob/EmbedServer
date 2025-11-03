@@ -108,7 +108,8 @@ def redirect_to_target(idge):
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#43B581">
 
-        <meta property="og:site_name" content="Botge - {channel} - {upload_date_text}\nClipper: {clipper}\nCategory: {category}\nViews: {view_count}">
+        <meta name="theme-color" content="#43B581" data-react-helmet="true">
+        <meta property="og:site_name" content="{channel} - {upload_date_text}\nClipper: {clipper}\nCategory: {category}\nViews: {view_count}">
         <meta property="og:title" content="{title}">
         <meta property="og:url" content="{url}">
 
