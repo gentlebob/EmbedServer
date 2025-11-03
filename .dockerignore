@@ -1,0 +1,10 @@
+.github
+.vscode
+files
+
+.dockerignore
+.env
+.gitattributes
+.gitignore
+compose.yaml
+Dockerfile

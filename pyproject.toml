@@ -1,12 +1,17 @@
 [project]
 name = "embedserver"
-version = "0.1.0"
-description = ""
+version = "1.0.0"
+description = "Embed server for Botge."
+authors = [
+  { name = "gentlebob" },
+  { name = "Tresster" }
+]
 requires-python = ">=3.13"
 dependencies = [
-  "flask (>=3.1.0,<4.0.0)",
-  "yt-dlp (>=2025.4.30,<2026.0.0)",
-  "waitress (>=3.0.2,<4.0.0)"
+  "flask==3.1.2",
+  "yt-dlp==2025.10.22",
+  "waitress==3.0.2",
+  "apscheduler==3.11.1"
 ]
 
 [build-system]
