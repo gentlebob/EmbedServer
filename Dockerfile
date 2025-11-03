@@ -33,4 +33,4 @@ COPY . /app
 
 VOLUME ["/app/files"]
 EXPOSE 8080
-CMD [ "poetry", "run", "waitress-serve", "--host", "0.0.0.0", "embedserver.app.app" ]
+CMD [ "poetry", "run", "waitress-serve", "--host", "0.0.0.0", "src.app.app" ]
